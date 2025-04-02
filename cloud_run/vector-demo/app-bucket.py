@@ -12,9 +12,9 @@ bucket           = os.environ["BUCKET"]
 gcs_file_system = gcsfs.GCSFileSystem(project=gcp_project)
 
 # Define the location of the geojson files
-cities_file = f"gs://{bucket}/cities-geojson"
-roads_file = f"gs://{bucket}/roads-geojson"
-regions_file = f"gs://{bucket}/regions-geojson"
+cities_file = f"gs://{bucket}/cities.geojson"
+roads_file = f"gs://{bucket}/roads.geojson"
+regions_file = f"gs://{bucket}/regions.geojson"
 
 # Read the files and convert them to geopandas geodataframes.
 with gcs_file_system.open(cities_file) as cities, gcs_file_system.open(roads_file) as roads, gcs_file_system.open(regions_file) as regions:
