@@ -34,6 +34,7 @@ images:
   - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
 options:
   substitutionOption: ALLOW_LOOSE
+  loggingBucket: gs://gisdemo-logs
 substitutions:
   _LABELS: gcb-trigger-id=3a0d93c0-634c-4dc2-a73c-2dfa98c7aa65
   _TRIGGER_ID: 3a0d93c0-634c-4dc2-a73c-2dfa98c7aa65
